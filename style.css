@@ -1,0 +1,302 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(''); /* Page background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Navbar background with transparency */
+  padding: 10px 20px;
+  width: 100%;
+  display: block;
+ 
+}
+
+.navbar a,
+.dropbtn {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9); /* Light background with transparency */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #0c0c0c;
+  color: white;
+  shape-margin: 2px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1500px;
+  margin-top: 20px;
+  background-image: url('giff\ bus.gif'); /* Background image for the card container */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for the container */
+  justify-content: space-between;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Card background with transparency */
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  padding: auto;
+}
+
+.card-image {
+  width: 100%;
+  height: 50%;
+  border-radius: 8px 8px 0 0;
+}
+
+.card h2 {
+  margin: 15px 0 20px 0;
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #333;
+}
+
+.card-btn {
+  background-color: rgb(10, 10, 10);
+  color: rgb(248, 247, 247);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #09d7f7;
+  color: black;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+#location-display {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#location-info {
+  font-size: 16px;
+  font-weight: bold;
+}
+/* Overall Section Styling */
+#contact {
+  background-color: #f0f4f7; /* Soft, light blue background */
+  padding: 60px 0;
+}
+
+/* Text Centering and Styling */
+#contact h2 {
+  font-size: 2.5rem;
+  color: #2d3e50; /* Dark blue-gray color */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#contact p.lead {
+  font-size: 1.25rem;
+  color: #6c757d; /* Medium gray color */
+  margin-bottom: 40px;
+}
+
+/* Form Styling */
+#contact .form-label {
+  font-weight: 600;
+  color: #2d3e50; /* Dark blue-gray color */
+}
+
+#contact .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da; /* Light gray border */
+  padding: 12px 15px;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background-color: #ffffff; /* White background for input fields */
+}
+
+#contact .form-control:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Blue glow on focus */
+}
+
+/* Submit Button Styling */
+#contact .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#contact .btn-primary:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Darker shadow on hover */
+}
+
+/* Contact Information Styling */
+#contact .col-lg-6 h5 {
+  font-size: 1.3rem;
+  color: #2d3e50; /* Dark blue-gray color */
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+#contact .col-lg-6 p {
+  font-size: 1rem;
+  color: #6c757d; /* Medium gray color */
+  margin-bottom: 15px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  #contact h2 {
+      font-size: 2rem;
+  }
+
+  #contact .btn-primary {
+      width: 100%;
+  }
+
+  #contact .col-lg-6 {
+      margin-bottom: 30px;
+  }
+}
+  
+  input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+  }
+  
+  button {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
+  
+  #otpResponse {
+      margin-top: 20px;
+      color: red;
+  }
+/* Container for the form */
+#formContainer {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Style for the form label */
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Style for the form input fields */
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Style for the input group */
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the toggle button */
+.btn-outline-secondary {
+  border-radius: 0 5px 5px 0;
+  border-color: #ccc;
+  color: #555;
+}
+
+/* Add margin between form elements */
+.mb-3 {
+  margin-bottom: 15px;
+}  

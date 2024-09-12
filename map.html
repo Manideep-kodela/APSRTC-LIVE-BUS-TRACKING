@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Bus Stations</title>
+    <style>
+       iframe {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+       }
+    </style>
+</head>
+<body>
+    <iframe id="mapIframe" src="https://script.google.com/macros/s/AKfycbxkHeXndUo4l7mAB3kawA1PPSZphTPIn3-nyVVJtLojQhufmVjYynedbMcBUlw7gbuf/exec" frameborder="0"></iframe>
+
+    <script>
+        // Function to handle successful location retrieval
+        function handleSuccess(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            console.log('Latitude:', latitude);
+            console.log('Longitude:', longitude);
+
+            // Optional: You can use these coordinates to update the iframe URL or perform other actions
+            // For example, update iframe src with the user's location if the iframe URL supports query parameters
+            // document.getElementById('mapIframe').src = `https://example.com/map?lat=${latitude}&lng=${longitude}`;
+        }
+
+        // Function to handle errors in location retrieval
+        function handleError(error) {
+            console.warn('ERROR(' + error.code + '): ' + error.message);
+        }
+
+        // Request the user's location
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
+        } else {
+            console.log('Geolocation is not supported by this browser.');
+        }
+    </script>
+</body>
+</html>
